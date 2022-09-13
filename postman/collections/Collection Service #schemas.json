@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "6d86acff-a28f-4c80-b449-137e47b49ab3",
+		"name": "Collection Service #schemas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23263618-6d86acff-a28f-4c80-b449-137e47b49ab3"
+	},
+	"item": [
+		{
+			"name": "item-types",
+			"item": [
+				{
+					"name": "list item-types",
+					"id": "20f5c3f7-bad1-40e6-a456-d8b05b63b70b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/item-types/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "collection",
+					"id": "6456b416-ef9a-494c-b544-69b827fcc6d6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"collection\",\n    \"summary\": \"Save your requests in a collection for reuse and sharing\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"variables\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": \"string\"\n                        },\n                        \"value\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"allow-child-types\",\n            \"allowed\": [\n                \"folder\",\n                \"ws-raw-request\",\n                \"ws-socketio-request\",\n                \"grpc-request\"\n            ]\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": [\"documentation\"]\n        },\n        {\n            \"constraint\": \"require-extensions\",\n            \"required\": [\"documentation\"]\n        }\n    ],\n    \"extensions\": {\n        \"documentation\": {}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/collection",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"collection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "folder",
+					"id": "6cdb8802-2e21-4117-b1e2-940e1d8087aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"folder\",\n    \"summary\": \"Organize your stuff with hierarchical folders\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"allow-child-types\",\n            \"allowed\": [\n                \"folder\",\n                \"ws-raw-request\",\n                \"ws-socketio-request\",\n                \"grpc-request\"\n            ]\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": [\"documentation\"]\n        }\n    ],\n    \"extensions\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/folder",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"folder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "grpc-request",
+					"id": "e797694d-8dcf-4b71-9b1b-bf0e5975e9aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"grpc-request\",\n    \"summary\": \"gRPC Request\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"url\",\n            \"methodPath\",\n            \"message\",\n            \"metadata\"\n        ],\n        \"properties\": {\n            \"url\": {\n                \"type\": \"string\"\n            },\n            \"methodPath\": {\n                \"type\": \"string\"\n            },\n            \"message\": {\n                \"type\": \"object\",\n                \"required\": [\n                    \"content\"\n                ],\n                \"properties\": {\n                    \"content\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"additionalProperties\": false\n            },\n            \"metadata\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": \"string\"\n                        },\n                        \"value\": {\n                            \"type\": \"string\"\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"settings\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"secureConnection\": {\n                        \"type\": \"boolean\"\n                    },\n                    \"strictSSL\": {\n                        \"type\": \"boolean\"\n                    },\n                    \"maxResponseMessageSize\": {\n                        \"type\": \"number\"\n                    }\n                },\n                \"additionalProperties\": false\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"limit-children\",\n            \"limit\": 0\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": [\"auth\", \"schema\", \"events\", \"documentation\"]\n        }\n    ],\n    \"extensions\": {\n        \"auth\": {\n            \"supportedAuthTypes\": [\"noauth\", \"apikey\", \"basic\", \"bearer\"]\n        },\n        \"schema\": {\n            \"supportedSchemaTypes\": [\"proto2\", \"proto3\"],\n            \"supportedSchemaFormats\": [\"proto\"]\n        },\n        \"events\": {\n            \"supportedListeners\": [\"beforeInvoke\", \"afterResponse\"]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/grpc-request",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"grpc-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ws-raw-request",
+					"id": "64d5ed56-ec7c-4e1e-8254-1360f50c61f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ws-raw-request\",\n    \"summary\": \"Raw WebSocket Request\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"url\": {\n                \"type\": \"string\"\n            },\n            \"headers\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": \"string\"\n                        },\n                        \"value\": {\n                            \"type\": \"string\"\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"queryParams\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": [\n                                \"string\",\n                                \"null\"\n                            ]\n                        },\n                        \"value\": {\n                            \"type\": [\n                                \"string\",\n                                \"null\"\n                            ]\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"settings\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"handshakeTimeout\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    },\n                    \"retryCount\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    },\n                    \"maxPayload\": {\n                        \"type\": \"number\",\n                        \"minimum\": 0\n                    },\n                    \"retryDelay\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    }\n                },\n                \"additionalProperties\": false\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"allow-child-types\",\n            \"allowed\": [\n                \"ws-raw-message\"\n            ]\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": [\"documentation\"]\n        }\n    ],\n    \"extensions\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/ws-raw-request",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"ws-raw-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ws-raw-message",
+					"id": "7e06302b-4fa8-4269-80b4-ec0cfaec2d2f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ws-raw-message\",\n    \"summary\": \"Raw WebSocket Messages\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"oneOf\": [\n            {\n                \"type\": \"object\",\n                \"required\": [\n                    \"content\",\n                    \"type\"\n                ],\n                \"properties\": {\n                    \"content\": {\n                        \"type\": \"string\"\n                    },\n                    \"type\": {\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"text\",\n                            \"json\",\n                            \"xml\",\n                            \"html\"\n                        ]\n                    }\n                },\n                \"additionalProperties\": false\n            },\n            {\n                \"type\": \"object\",\n                \"required\": [\n                    \"content\",\n                    \"type\",\n                    \"subtype\"\n                ],\n                \"properties\": {\n                    \"content\": {\n                        \"type\": \"string\"\n                    },\n                    \"type\": {\n                        \"type\": \"string\",\n                        \"const\": \"binary\"\n                    },\n                    \"subtype\": {\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"hex\",\n                            \"base64\"\n                        ]\n                    }\n                },\n                \"additionalProperties\": false\n            }\n        ]\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"limit-children\",\n            \"limit\": 0\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": []\n        }\n    ],\n    \"extensions\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/ws-raw-message",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"ws-raw-message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ws-socketio-request",
+					"id": "ca32b1d8-2ce9-4d87-91df-8d8463b647b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ws-socketio-request\",\n    \"summary\": \"Socket.IO Request\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"url\": {\n                \"type\": \"string\"\n            },\n            \"headers\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": \"string\"\n                        },\n                        \"value\": {\n                            \"type\": \"string\"\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"queryParams\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": [\n                                \"string\",\n                                \"null\"\n                            ]\n                        },\n                        \"value\": {\n                            \"type\": [\n                                \"string\",\n                                \"null\"\n                            ]\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"disabled\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"settings\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"version\": {\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"2\",\n                            \"3\",\n                            \"4\"\n                        ]\n                    },\n                    \"path\": {\n                        \"type\": \"string\"\n                    },\n                    \"handshakeTimeout\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    },\n                    \"retryCount\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    },\n                    \"retryDelay\": {\n                        \"type\": \"integer\",\n                        \"minimum\": 0\n                    }\n                },\n                \"additionalProperties\": false\n            },\n            \"events\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"name\"\n                    ],\n                    \"properties\": {\n                        \"name\": {\n                            \"type\": \"string\"\n                        },\n                        \"description\": {\n                            \"type\": \"string\"\n                        },\n                        \"subscribeOnConnect\": {\n                            \"type\": \"boolean\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"allow-child-types\",\n            \"allowed\": [\n                \"ws-socketio-message\"\n            ]\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": [\"documentation\"]\n        }\n    ],\n    \"extensions\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/ws-socketio-request",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"ws-socketio-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ws-socketio-message",
+					"id": "81dae68a-5739-4b0b-990c-1e9f4e96f8ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ws-socketio-message\",\n    \"summary\": \"Socket.IO Messages\",\n    \"schema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"eventName\",\n            \"args\"\n        ],\n        \"properties\": {\n            \"eventName\": {\n                \"type\": \"string\"\n            },\n            \"acknowledgement\": {\n                \"type\": \"boolean\"\n            },\n            \"args\": {\n                \"type\": \"array\",\n                \"minItems\": 1,\n                \"items\": {\n                    \"oneOf\": [\n                        {\n                            \"type\": \"object\",\n                            \"required\": [\n                                \"content\",\n                                \"type\"\n                            ],\n                            \"properties\": {\n                                \"content\": {\n                                    \"type\": \"string\"\n                                },\n                                \"type\": {\n                                    \"type\": \"string\",\n                                    \"enum\": [\n                                        \"text\",\n                                        \"json\"\n                                    ]\n                                }\n                            },\n                            \"additionalProperties\": false\n                        },\n                        {\n                            \"type\": \"object\",\n                            \"required\": [\n                                \"content\",\n                                \"type\",\n                                \"subtype\"\n                            ],\n                            \"properties\": {\n                                \"content\": {\n                                    \"type\": \"string\"\n                                },\n                                \"type\": {\n                                    \"type\": \"string\",\n                                    \"const\": \"binary\"\n                                },\n                                \"subtype\": {\n                                    \"type\": \"string\",\n                                    \"enum\": [\n                                        \"hex\",\n                                        \"base64\"\n                                    ]\n                                }\n                            },\n                            \"additionalProperties\": false\n                        }\n                    ]\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"constraints\": [\n        {\n            \"constraint\": \"limit-children\",\n            \"limit\": 0\n        },\n        {\n            \"constraint\": \"allow-extensions\",\n            \"allowed\": []\n        }\n    ],\n    \"extensions\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/item-types/ws-socketio-message",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"item-types",
+								"ws-socketio-message"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "664f6d74-efde-4c83-99f2-6b8d6826b7eb"
+		},
+		{
+			"name": "extensions",
+			"item": [
+				{
+					"name": "list extensions",
+					"id": "a525d34f-22d0-425f-8a6b-aa6e91ad1548",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/extensions/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"extensions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "documentation",
+					"id": "25fe5e5c-7930-455f-8379-d5f5d7c40da0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"documentation\",\n    \"summary\": \"Document your items\",\n    \"typeLevelSchema\": {\n        \"type\": \"object\",\n        \"additionalProperties\": false\n    },\n    \"itemLevelSchema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"content\"\n        ],\n        \"properties\": {\n            \"content\": {\n                \"type\": \"string\"\n            },\n            \"summary\": {\n                \"type\": \"string\",\n                \"maxLength\": 140\n            }\n        },\n        \"additionalProperties\": false\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/extensions/documentation",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"extensions",
+								"documentation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth",
+					"id": "7d701776-3773-4042-9202-221eb3aca211",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"auth\",\n    \"summary\": \"Security credentials\",\n    \"typeLevelSchema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"supportedAuthTypes\"\n        ],\n        \"properties\": {\n            \"supportedAuthTypes\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"string\",\n                    \"enum\": [\"noauth\", \"apikey\", \"basic\", \"bearer\"]\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"itemLevelSchema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"type\"\n        ],\n        \"properties\": {\n            \"type\": {\n                \"type\": \"string\",\n                \"enum\": [\"noauth\", \"apikey\", \"basic\", \"bearer\"]\n            },\n            \"apikey\": {\n                \"$ref\": \"#/definitions/key-value-pairs\"\n            },\n            \"basic\": {\n                \"$ref\": \"#/definitions/key-value-pairs\"\n            },\n            \"bearer\": {\n                \"$ref\": \"#/definitions/key-value-pairs\"\n            }\n        },\n        \"additionalProperties\": false,\n        \"definitions\": {\n            \"key-value-pairs\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"key\",\n                        \"value\"\n                    ],\n                    \"properties\": {\n                        \"key\": {\n                            \"type\": \"string\"\n                        },\n                        \"value\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/extensions/auth",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"extensions",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "schema",
+					"id": "c158e381-af9c-4fdd-995d-a09f956806d6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"schema\",\n    \"summary\": \"An associated schema\",\n    \"typeLevelSchema\": {\n        \"definitions\": {\n            \"schema-type\": {\n                \"type\": \"string\",\n                \"enum\": [\"proto2\", \"proto3\"]\n            },\n            \"schema-format\": {\n                \"type\": \"string\",\n                \"enum\": [\"proto\"]\n            }\n        },\n        \"type\": \"object\",\n        \"required\": [\n            \"supportedSchemaTypes\",\n            \"supportedSchemaFormats\"\n        ],\n        \"properties\": {\n            \"supportedSchemaTypes\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"$ref\": \"#/definitions/schema-type\"\n                }\n            },\n            \"supportedSchemaFormats\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"$ref\": \"#/definitions/schema-format\"\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"itemLevelSchema\": {\n        \"type\": \"object\",\n        \"oneOf\": [\n            {\n                \"required\": [\n                    \"source\"\n                ],\n                \"properties\": {\n                    \"source\": {\n                        \"type\": \"string\",\n                        \"const\": \"none\"\n                    }\n                },\n                \"additionalProperties\": false\n            },\n            {\n                \"required\": [\n                    \"source\"\n                ],\n                \"properties\": {\n                    \"source\": {\n                        \"type\": \"string\",\n                        \"const\": \"auto\"\n                    }\n                },\n                \"additionalProperties\": false\n            },\n            {\n                \"required\": [\n                    \"source\",\n                    \"apiId\",\n                    \"versionId\"\n                ],\n                \"properties\": {\n                    \"source\": {\n                        \"type\": \"string\",\n                        \"const\": \"api\"\n                    },\n                    \"apiId\": {\n                        \"type\": \"string\"\n                    },\n                    \"versionId\": {\n                        \"type\": \"string\"\n                    },\n                    \"releaseId\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"additionalProperties\": false\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/extensions/schema",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"extensions",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "events",
+					"id": "711e128f-f46b-4e19-b0a8-c14342b37a2d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"events\",\n    \"summary\": \"\",\n    \"typeLevelSchema\": {\n        \"type\": \"object\",\n        \"required\": [\n            \"supportedListeners\"\n        ],\n        \"properties\": {\n            \"supportedListeners\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"beforeInvoke\",\n                        \"afterResponse\"\n                    ]\n                }\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"itemLevelSchema\": {\n        \"type\": \"array\",\n        \"items\": {\n            \"type\": \"object\",\n            \"required\": [\n                \"listen\"\n            ],\n            \"properties\": {\n                \"listen\": {\n                    \"type\": \"string\"\n                },\n                \"script\": {\n                    \"type\": \"object\",\n                    \"required\": [\n                        \"exec\"\n                    ],\n                    \"properties\": {\n                        \"exec\": {\n                            \"type\": \"string\"\n                        },\n                        \"type\": {\n                            \"type\": \"string\",\n                            \"enum\": [\"text/javascript\"]\n                        }\n                    },\n                    \"additionalProperties\": false\n                }\n            },\n            \"additionalProperties\": false\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/extensions/events",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"extensions",
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7dfe0625-49d8-47fc-96a1-1edfd822cd52"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{AUTH_PASSWORD}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{AUTH_USERNAME}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "e36e1b4f-b8e0-404e-b179-e497735fd1e9"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "0397b955-94e7-4a79-833c-cf3c114ca03b"
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9741f1c4-5279-4632-99fe-e05f92e1a367",
+			"key": "HOST",
+			"value": "https://collection.postman-beta.tech",
+			"type": "string"
+		},
+		{
+			"id": "d8c4f126-1989-47cf-9a49-a94822976b13",
+			"key": "AUTH_USERNAME",
+			"value": "username",
+			"type": "string"
+		},
+		{
+			"id": "a89d4679-c99a-49d9-9735-bfbb10892253",
+			"key": "AUTH_PASSWORD",
+			"value": "password",
+			"type": "string"
+		}
+	]
+}

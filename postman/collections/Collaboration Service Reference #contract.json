@@ -1,0 +1,1541 @@
+{
+	"info": {
+		"_postman_id": "7ce937fb-56e4-48e3-92bb-eb874842fbec",
+		"name": "Collaboration Service Reference #contract",
+		"description": "This service provides API to manage collaboration request for postman entities\n\nContact Support:\n Name: Arjun Londhey\n Email: arjun.londhey@postman.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23263618-7ce937fb-56e4-48e3-92bb-eb874842fbec"
+	},
+	"item": [
+		{
+			"name": "registry",
+			"item": [
+				{
+					"name": "{registry Id}",
+					"item": [
+						{
+							"name": "Get Registry Record",
+							"id": "81070761-95ba-4b4e-9520-71db9dd0998a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-support-secret",
+										"value": " {{support_secret}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/registry/:registryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registry",
+										":registryId"
+									],
+									"variable": [
+										{
+											"id": "2d39678a-5880-4b79-a734-5b8166089c4f",
+											"key": "registryId",
+											"value": "do cupidatat aliqua",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Get information for a registered postman entity for collaboration request flows"
+							},
+							"response": [
+								{
+									"id": "b6b59cfb-6507-4e71-96ad-0273d453ed98",
+									"name": "Get Registry Record",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-support-secret",
+												"value": " {{support_secret}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/registry/:registryId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"registry",
+												":registryId"
+											],
+											"variable": [
+												{
+													"id": "2d39678a-5880-4b79-a734-5b8166089c4f",
+													"key": "registryId",
+													"value": "do cupidatat aliqua",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Get information for a registered postman entity for collaboration request flows"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"type\": \"request-to-access\",\n \"model\": \"collection\",\n \"name\": \"request-to-access:collection\",\n \"id\": 10,\n \"notificationTemplates\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Registry Record",
+							"id": "e667b03c-8e70-452e-bbad-a194e4123a26",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-support-secret",
+										"value": "{{support_secret}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/registry/:registryId?registryId=do cupidatat aliqua",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registry",
+										":registryId"
+									],
+									"query": [
+										{
+											"key": "registryId",
+											"value": "do cupidatat aliqua"
+										}
+									],
+									"variable": [
+										{
+											"id": "f91edbdd-2652-4707-9f00-93401cf8caa8",
+											"key": "registryId",
+											"value": "{{registryId}}",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Update access_server/notification templates."
+							},
+							"response": [
+								{
+									"id": "ca0ede6f-f567-4435-a294-a5d26f036631",
+									"name": "Update Registry Record",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-support-secret",
+												"value": "{{support_secret}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/registry/:registryId?registryId=do cupidatat aliqua",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"registry",
+												":registryId"
+											],
+											"query": [
+												{
+													"key": "registryId",
+													"value": "do cupidatat aliqua"
+												}
+											],
+											"variable": [
+												{
+													"id": "f91edbdd-2652-4707-9f00-93401cf8caa8",
+													"key": "registryId",
+													"value": "{{registryId}}",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Update access_server/notification templates."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"type\": \"request-to-access\",\n \"model\": \"collection\",\n \"name\": \"request-to-access:collection\",\n \"id\": 10,\n \"notificationTemplates\": {\n  \"inapp\": {}\n }\n}"
+								}
+							]
+						}
+					],
+					"id": "8388e51a-b6ea-4890-ab31-ee13eb9a5b49"
+				},
+				{
+					"name": "Create Registry Record",
+					"id": "e9e2c550-7cde-4815-ad96-f9383c32197e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-support-secret",
+								"value": "{{support_secret}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"<string>\",\n    \"model\": \"<string>\",\n    \"context\": {\n        \"model\": \"<string>\",\n        \"action\": \"<string>\",\n        \"config\": \"<object>\"\n    },\n    \"add_to_team\": \"<boolean>\",\n    \"access_service\": \"<string>\",\n    \"notification\": {\n        \"webhook\": \"<string>\",\n        \"email_templates\": \"<object>\",\n        \"notification_templates\": \"<object>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/registry",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"registry"
+							]
+						},
+						"description": "Register one of the enabled collaboration flow for a postman entity"
+					},
+					"response": [
+						{
+							"id": "c11f890a-f7b0-41e6-ae1a-1600a8008b56",
+							"name": "Successful registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-support-secret",
+										"value": "{{support_secret}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"<string>\",\n    \"model\": \"<string>\",\n    \"context\": {\n        \"model\": \"<string>\",\n        \"action\": \"<string>\",\n        \"config\": \"<object>\"\n    },\n    \"add_to_team\": \"<boolean>\",\n    \"access_service\": \"<string>\",\n    \"notification\": {\n        \"webhook\": \"<string>\",\n        \"email_templates\": \"<object>\",\n        \"notification_templates\": \"<object>\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/registry",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registry"
+									]
+								},
+								"description": "Register one of the enabled collaboration flow for a postman entity"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 10,\n \"type\": \"request-to-access\",\n \"model\": \"collection\",\n \"notificationTemplates\": {\n  \"email\": {},\n  \"inapp\": {}\n }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Registry Record",
+					"id": "460e397e-659c-4ce0-b8c0-691d2075a189",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-support-secret",
+								"value": "{{support_secret}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/registry",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"registry"
+							]
+						},
+						"description": "Get information for a registered postman entity for collaboration request flows"
+					},
+					"response": [
+						{
+							"id": "c06bd0c5-4ba3-4821-b94d-6e9cb76b3d2e",
+							"name": "Get All Registry Record",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-support-secret",
+										"value": "{{support_secret}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/registry",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registry"
+									]
+								},
+								"description": "Get information for a registered postman entity for collaboration request flows"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"type\": \"request-to-access\",\n  \"model\": \"collection\",\n  \"name\": \"request-to-access:collection\",\n  \"id\": 1,\n  \"notificationTemplates\": {}\n },\n {\n  \"type\": \"request-to-access\",\n  \"model\": \"mock\",\n  \"name\": \"request-to-access:mock\",\n  \"id\": 2,\n  \"notificationTemplates\": {}\n }\n]"
+						}
+					]
+				}
+			],
+			"id": "731007a6-24e0-47cb-90cd-3ad0df25ee88"
+		},
+		{
+			"name": "access-requests",
+			"item": [
+				{
+					"name": "Find Access Request By ModelId",
+					"id": "9cbf6b50-ec3b-49d9-a0cf-d240dd01d463",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/access-requests/?model={{model}}&modelId={{modelId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"access-requests",
+								""
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "{{model}}"
+								},
+								{
+									"key": "modelId",
+									"value": "{{modelId}}"
+								}
+							]
+						},
+						"description": "Get details about all request for a RoleManager and/or an entity based on params provided with request"
+					},
+					"response": [
+						{
+							"id": "6b38f134-61c9-44a6-bf0d-0541fa4fa9d7",
+							"name": "Find Access Request By ModelId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/access-requests/?model={{model}}&modelId={{modelId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"access-requests",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "{{model}}"
+										},
+										{
+											"key": "modelId",
+											"value": "{{modelId}}"
+										}
+									]
+								},
+								"description": "Get details about all request for a RoleManager and/or an entity based on params provided with request"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n  \"meta\": {\n   \"model\": \"request-to-access\",\n   \"action\": \"findone\"\n  },\n  \"data\": {\n   \"code\": \"1234\",\n   \"model\": \"collection\",\n   \"type\": \"request-to-access\",\n   \"modelId\": \"1234\",\n   \"teamId\": \"1\",\n   \"role\": \"COLLECTION_VIEWER\",\n   \"context\": {\n    \"action\": \"share_entity\",\n    \"model\": \"workspace\",\n    \"modelId\": \"e7a5d63e-588a-474d-8025-dc23273f6c54\"\n   },\n   \"responders\": [\n    {\n     \"type\": \"user\",\n     \"id\": \"157335\"\n    }\n   ],\n   \"createdBy\": \"157336\",\n   \"createdAt\": \"2019-10-25T05:54:40.000Z\",\n   \"updatedAt\": \"2019-10-25T05:54:40.000Z\",\n   \"state\": \"pending_approval\"\n  }\n },\n {\n  \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n  \"meta\": {\n   \"model\": \"request-to-access\",\n   \"action\": \"findone\"\n  },\n  \"data\": {\n   \"code\": \"1235\",\n   \"model\": \"collection\",\n   \"type\": \"request-to-access\",\n   \"modelId\": \"1234\",\n   \"teamId\": \"1\",\n   \"role\": \"COLLECTION_VIEWER\",\n   \"context\": {\n    \"action\": \"share_entity\",\n    \"model\": \"workspace\",\n    \"modelId\": \"e7a5d63e-588a-474d-8025-dc23273f6c54\"\n   },\n   \"responders\": [\n    {\n     \"type\": \"user\",\n     \"id\": \"157335\"\n    }\n   ],\n   \"createdBy\": \"157336\",\n   \"createdAt\": \"2019-10-25T05:54:40.000Z\",\n   \"updatedAt\": \"2019-10-25T05:54:40.000Z\",\n   \"state\": \"approved\"\n  }\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find Access Request By Id",
+					"id": "020b99b8-d1d1-481d-b773-ac44308c8410",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/access-requests/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"access-requests",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "bc3a424b-c0e7-42c5-a001-8241b7896b59",
+									"key": "id",
+									"value": "do cupidatat aliqua",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Get details about all request for a RoleManager and/or an entity based on params provided with request"
+					},
+					"response": [
+						{
+							"id": "f69eb33c-8b92-4e82-88ab-4bf39f99d26f",
+							"name": "Find Access Request By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/access-requests/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"access-requests",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "bc3a424b-c0e7-42c5-a001-8241b7896b59",
+											"key": "id",
+											"value": "do cupidatat aliqua",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Get details about all request for a RoleManager and/or an entity based on params provided with request"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n \"meta\": {\n  \"model\": \"request-to-access\",\n  \"action\": \"findone\"\n },\n \"data\": {\n  \"code\": \"1234\",\n  \"model\": \"collection\",\n  \"type\": \"request-to-access\",\n  \"modelId\": \"<entity_id>\",\n  \"teamId\": \"73765\",\n  \"role\": \"COLLECTION_VIEWER\",\n  \"context\": {\n   \"action\": \"share_entity\",\n   \"model\": \"workspace\",\n   \"modelId\": \"e7a5d63e-588a-474d-8025-dc23273f6c54\"\n  },\n  \"responders\": [\n   {\n    \"type\": \"user\",\n    \"id\": \"157335\"\n   }\n  ],\n  \"createdBy\": \"157336\",\n  \"createdAt\": \"2019-10-25T05:54:40.000Z\",\n  \"updatedAt\": \"2019-10-25T05:54:40.000Z\",\n  \"state\": \"pending_approval\"\n }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a new Access Request",
+					"id": "4533158d-eaab-4d84-bc21-fe0904c9f30a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{access_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{entity_type}}\",\n    \"modelId\": \"{{C1_id}}\",\n    \"context\": {\n        \"action\": \"share_entity\",\n        \"model\": \"workspace\",\n        \"modelId\": \"{{U2_personal_workspace}}\"\n    },\n    \"approvers\": [\n        {\n            \"type\": \"user\",\n            \"id\": \"{{U1_userid}}\"\n        }\n    ],\n    \"role\": \"{{entity_viewer_role}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/access-requests/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"access-requests",
+								"create"
+							]
+						},
+						"description": "Create an invite for postman entity"
+					},
+					"response": [
+						{
+							"id": "d337c647-738f-4ece-8510-6239f51c8304",
+							"name": "Create a new Access Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{entity_type}}\",\n    \"modelId\": \"{{C1_id}}\",\n    \"context\": {\n        \"action\": \"share_entity\",\n        \"model\": \"workspace\",\n        \"modelId\": \"{{U2_personal_workspace}}\"\n    },\n    \"approvers\": [\n        {\n            \"type\": \"user\",\n            \"id\": \"{{U1_userid}}\"\n        }\n    ],\n    \"role\": \"{{entity_viewer_role}}\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/access-requests/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"access-requests",
+										"create"
+									]
+								},
+								"description": "Create an invite for postman entity"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n \"meta\": {\n  \"model\": \"request-to-access\",\n  \"action\": \"create\"\n },\n \"data\": {\n  \"code\": \"74662eec-0e9f-4c35-909d-c21bda053aa1\",\n  \"model\": \"collection\",\n  \"type\": \"request-to-access\",\n  \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n  \"teamId\": \"73765\",\n  \"role\": \"COLLECTION_EDITOR\",\n  \"context\": {\n   \"action\": \"grant_role\"\n  },\n  \"responders\": [\n   {\n    \"type\": \"user\",\n    \"id\": \"116322\"\n   }\n  ],\n  \"createdBy\": \"157336\",\n  \"createdAt\": \"2019-10-25T05:54:40.000Z\",\n  \"updatedAt\": \"2019-10-25T05:54:40.000Z\",\n  \"state\": \"pending_approval\",\n  \"modelName\": \"share_grant\"\n }\n}"
+						}
+					]
+				},
+				{
+					"name": "Approve an Access Request",
+					"id": "f4391a02-29b2-498c-9d7d-f214644d524b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/access-requests/:request_id/approve",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"access-requests",
+								":request_id",
+								"approve"
+							],
+							"variable": [
+								{
+									"id": "38bb35ff-8732-4b3a-8859-56141e04cef3",
+									"key": "request_id",
+									"value": "do cupidatat aliqua",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "accept a request-to-access request"
+					},
+					"response": [
+						{
+							"id": "03a9f7d9-d74e-47aa-b1b4-da77e138d8fa",
+							"name": "Approve an Access Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/access-requests/:request_id/approve",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"access-requests",
+										":request_id",
+										"approve"
+									],
+									"variable": [
+										{
+											"id": "38bb35ff-8732-4b3a-8859-56141e04cef3",
+											"key": "request_id",
+											"value": "do cupidatat aliqua",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "accept a request-to-access request"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n \"meta\": {\n  \"model\": \"collection\",\n  \"action\": \"share_entity\"\n },\n \"data\": {\n  \"code\": \"4d2f61ed-1d05-4c60-8aa5-61ed13ce7ecf\",\n  \"model\": \"collection\",\n  \"type\": \"request-to-access\",\n  \"modelId\": \"157335-206ee85c-3c3d-41a8-8e5d-be99b873307f\",\n  \"teamId\": \"73765\",\n  \"role\": \"COLLECTION_VIEWER\",\n  \"context\": {\n   \"action\": \"share_entity\",\n   \"model\": \"workspace\",\n   \"modelId\": \"e7a5d63e-588a-474d-8025-dc23273f6c54\"\n  },\n  \"responders\": [\n   {\n    \"type\": \"user\",\n    \"id\": \"157335\"\n   }\n  ],\n  \"createdBy\": \"157336\",\n  \"createdAt\": \"2019-10-25T05:54:40.000Z\",\n  \"updatedAt\": \"2019-10-25T05:58:29.000Z\",\n  \"state\": \"approved\",\n  \"modelName\": \"share_grant_3\",\n  \"displayNameForRole\": \"Viewer\"\n }\n}"
+						}
+					]
+				}
+			],
+			"id": "f597fa28-9d78-4d66-8899-711c9a0b81a3"
+		},
+		{
+			"name": "action-requests",
+			"item": [
+				{
+					"name": "{code}",
+					"item": [
+						{
+							"name": "Approve (CM approves the request to make workspace public)",
+							"id": "4d6a7c01-015e-4c2e-95d9-50d495e9e18c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"voluptate\""
+								},
+								"url": {
+									"raw": "{{baseUrl}}/action-requests/:code/approve",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests",
+										":code",
+										"approve"
+									],
+									"variable": [
+										{
+											"id": "70bbf51b-c411-49af-9d52-d6e5ae493116",
+											"key": "code",
+											"value": "do cupidatat aliqua",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "f6b91bac-7cfc-46cf-a9fa-490ae6fc2f49",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access_token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "x-access-token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "\"voluptate\""
+										},
+										"url": {
+											"raw": "{{baseUrl}}/action-requests/:code/approve",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"action-requests",
+												":code",
+												"approve"
+											],
+											"variable": [
+												{
+													"id": "70bbf51b-c411-49af-9d52-d6e5ae493116",
+													"key": "code",
+													"value": "do cupidatat aliqua",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"modelId\": \"workspaceId\",\n \"meta\": {\n  \"model\": \"request-action\",\n  \"action\": \"approve\",\n  \"type\": \"make_workspace_public\"\n },\n \"data\": {\n  \"code\": \"b67164-8799-4785-865b-41aaf788cc9b\",\n  \"context\": {\n   \"action\": \"make_workspace_public\"\n  },\n  \"createdAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\",\n  \"createdBy\": \"1\",\n  \"id\": \"1\",\n  \"model\": \"workspace\",\n  \"modelId\": \"123\",\n  \"state\": \"approved\",\n  \"teamId\": \"1\",\n  \"type\": \"request-to-action\",\n  \"updatedAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\"\n }\n}"
+								},
+								{
+									"id": "4a85ef7e-a609-4052-ae0c-d30b13a964d6",
+									"name": "Fail",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access_token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "x-access-token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "\"voluptate\""
+										},
+										"url": {
+											"raw": "{{baseUrl}}/action-requests/:code/approve",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"action-requests",
+												":code",
+												"approve"
+											],
+											"variable": [
+												{
+													"id": "70bbf51b-c411-49af-9d52-d6e5ae493116",
+													"key": "code",
+													"value": "do cupidatat aliqua",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"trace\": \"trace_id\",\n \"error\": {\n  \"name\": \"error_name\",\n  \"message\": \"err_msg\",\n  \"code\": \"err_code\"\n }\n}"
+								}
+							]
+						},
+						{
+							"name": "Reject (CM rejects the request)",
+							"id": "453f3f36-89c1-4dba-820a-6a8a8f48c408",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"voluptate\""
+								},
+								"url": {
+									"raw": "{{baseUrl}}/action-requests/:code/reject",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests",
+										":code",
+										"reject"
+									],
+									"variable": [
+										{
+											"id": "019f729e-f87f-4672-9a13-e8fc6e1f30bb",
+											"key": "code",
+											"value": "do cupidatat aliqua",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "a5e064bb-daa1-474f-be2b-4618ccbdb11f",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access_token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "\"voluptate\""
+										},
+										"url": {
+											"raw": "{{baseUrl}}/action-requests/:code/reject",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"action-requests",
+												":code",
+												"reject"
+											],
+											"variable": [
+												{
+													"id": "019f729e-f87f-4672-9a13-e8fc6e1f30bb",
+													"key": "code",
+													"value": "do cupidatat aliqua",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"modelId\": \"modelId\",\n \"meta\": {\n  \"model\": \"request-action\",\n  \"action\": \"reject\",\n  \"type\": \"make_workspace_public\"\n },\n \"data\": {\n  \"code\": \"b67164-8799-4785-865b-41aaf788cc9b\",\n  \"context\": {\n   \"action\": \"make_workspace_public\"\n  },\n  \"createdAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\",\n  \"createdBy\": \"1\",\n  \"id\": \"1\",\n  \"model\": \"workspace\",\n  \"modelId\": \"123\",\n  \"state\": \"rejected\",\n  \"teamId\": \"1\",\n  \"type\": \"request-to-action\",\n  \"updatedAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\"\n }\n}"
+								},
+								{
+									"id": "15e56856-7af0-4e01-8fdd-bf1868d68ffa",
+									"name": "Fail",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access_token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "\"voluptate\""
+										},
+										"url": {
+											"raw": "{{baseUrl}}/action-requests/:code/reject",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"action-requests",
+												":code",
+												"reject"
+											],
+											"variable": [
+												{
+													"id": "019f729e-f87f-4672-9a13-e8fc6e1f30bb",
+													"key": "code",
+													"value": "do cupidatat aliqua",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"trace\": \"trace_id\",\n \"error\": {\n  \"name\": \"error_name\",\n  \"message\": \"err_msg\",\n  \"code\": \"err_code\"\n }\n}"
+								}
+							]
+						}
+					],
+					"id": "493d6aac-229b-4131-b539-0b2a07b79cf2"
+				},
+				{
+					"name": "Find",
+					"id": "2b57d6f0-002d-4f38-a60a-3c49cc457b42",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/action-requests?state=pending_approval&action=make_workspace_public&identifierType=requester&model=workspace&modelId=12345&populateModelMeta=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"action-requests"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "pending_approval",
+									"description": "optional"
+								},
+								{
+									"key": "action",
+									"value": "make_workspace_public",
+									"description": "required"
+								},
+								{
+									"key": "identifierType",
+									"value": "requester",
+									"description": "[required] Identifies if the requets is made to return response in terms of requester or approver"
+								},
+								{
+									"key": "model",
+									"value": "workspace",
+									"description": "optional"
+								},
+								{
+									"key": "modelId",
+									"value": "12345",
+									"description": "optional"
+								},
+								{
+									"key": "populateModelMeta",
+									"value": "true",
+									"description": "[optional] if true name of the model in response"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "04f9afd9-ba39-454f-897f-91d95d5282da",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/action-requests?state=pending_approval&action=make_workspace_public&identifierType=requester&model=workspace&modelId=12345&populateModelMeta=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "pending_approval",
+											"description": "optional"
+										},
+										{
+											"key": "action",
+											"value": "make_workspace_public",
+											"description": "required"
+										},
+										{
+											"key": "identifierType",
+											"value": "requester",
+											"description": "[required] Identifies if the requets is made to return response in terms of requester or approver"
+										},
+										{
+											"key": "model",
+											"value": "workspace",
+											"description": "optional"
+										},
+										{
+											"key": "modelId",
+											"value": "12345",
+											"description": "optional"
+										},
+										{
+											"key": "populateModelMeta",
+											"value": "true",
+											"description": "[optional] if true name of the model in response"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"meta\": {\n  \"model\": \"request-to-action\",\n  \"action\": \"find\"\n },\n \"data\": [\n  {\n   \"id\": 406,\n   \"code\": \"23e596ee-c4b8-4e7d-9378-d6c29f8396ea\",\n   \"model\": \"workspace\",\n   \"type\": \"request-to-action\",\n   \"modelId\": \"12345\",\n   \"teamId\": \"314442\",\n   \"role\": \"\",\n   \"context\": {\n    \"action\": \"make_workspace_public\"\n   },\n   \"responders\": null,\n   \"createdBy\": \"519623\",\n   \"createdAt\": \"2020-11-25T08:30:40.000Z\",\n   \"updatedAt\": \"2020-11-25T08:30:40.000Z\",\n   \"state\": \"pending_approval\",\n   \"notes\": \"this is a short note\"\n  }\n ]\n}"
+						},
+						{
+							"id": "a2751679-cf0a-4c4a-a44d-66c57827291d",
+							"name": "Fail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/action-requests?state=pending_approval&action=make_workspace_public&identifierType=requester&model=workspace&modelId=12345&populateModelMeta=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "pending_approval",
+											"description": "optional"
+										},
+										{
+											"key": "action",
+											"value": "make_workspace_public",
+											"description": "required"
+										},
+										{
+											"key": "identifierType",
+											"value": "requester",
+											"description": "[required] Identifies if the requets is made to return response in terms of requester or approver"
+										},
+										{
+											"key": "model",
+											"value": "workspace",
+											"description": "optional"
+										},
+										{
+											"key": "modelId",
+											"value": "12345",
+											"description": "optional"
+										},
+										{
+											"key": "populateModelMeta",
+											"value": "true",
+											"description": "[optional] if true name of the model in response"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"trace\": \"trace_id\",\n \"error\": {\n  \"name\": \"error_name\",\n  \"message\": \"err_msg\",\n  \"code\": \"err_code\"\n }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create (team member raises a request to CM)",
+					"id": "9cbfbbb1-5a74-4dec-8c21-f5fb12fe8f99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{access_token}}"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{access_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"do cupidatat aliqua\""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/action-requests/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"action-requests",
+								"create"
+							]
+						},
+						"description": "The action request endpoint will be a generic implementation in which based on context.action field we will distinguish the type of action/rules we have to provide. For request to make workspace public, we will pass action as convert_workspace_public. The same endpoint can be used in future, we just have to modify the context.action field to add action specific rules."
+					},
+					"response": [
+						{
+							"id": "e04936ab-85be-403f-994a-49c794d4b820",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"do cupidatat aliqua\""
+								},
+								"url": {
+									"raw": "{{baseUrl}}/action-requests/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests",
+										"create"
+									]
+								},
+								"description": "The action request endpoint will be a generic implementation in which based on context.action field we will distinguish the type of action/rules we have to provide. For request to make workspace public, we will pass action as convert_workspace_public. The same endpoint can be used in future, we just have to modify the context.action field to add action specific rules."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"modelId\": \"modelId\",\n \"meta\": {\n  \"model\": \"request-action\",\n  \"action\": \"create\",\n  \"type\": \"make_workspace_public\"\n },\n \"data\": {\n  \"code\": \"b67164-8799-4785-865b-41aaf788cc9b\",\n  \"context\": {\n   \"action\": \"make_workspace_public\"\n  },\n  \"createdAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\",\n  \"createdBy\": \"1\",\n  \"id\": \"1\",\n  \"model\": \"workspace\",\n  \"modelId\": \"123\",\n  \"state\": \"pending_approval\",\n  \"teamId\": \"1\",\n  \"type\": \"request-to-action\",\n  \"updatedAt\": \"Thu Nov 12 2020 14:25:53 GMT+0530 (India Standard Time)\"\n }\n}"
+						},
+						{
+							"id": "654b6f03-3bf9-45be-9599-3fcf25321093",
+							"name": "Fail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "x-access-token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"do cupidatat aliqua\""
+								},
+								"url": {
+									"raw": "{{baseUrl}}/action-requests/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"action-requests",
+										"create"
+									]
+								},
+								"description": "The action request endpoint will be a generic implementation in which based on context.action field we will distinguish the type of action/rules we have to provide. For request to make workspace public, we will pass action as convert_workspace_public. The same endpoint can be used in future, we just have to modify the context.action field to add action specific rules."
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"trace\": \"trace_id\",\n \"error\": {\n  \"name\": \"error_name\",\n  \"message\": \"err_msg\",\n  \"code\": \"err_code\"\n }\n}"
+						}
+					]
+				}
+			],
+			"id": "0ebefdd2-79e8-4df1-b73d-3badd3e6eb27"
+		},
+		{
+			"name": "Get Dynamic limit for shared requests",
+			"id": "538b7661-a9e2-477b-9500-f489096fac0e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "<Basic Auth Username>",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "<Basic Auth Password>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{beta_token}}"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/x/limits/sync_shared_requests?team_id=aliqua ut adipisicing ex incididunt",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"x",
+						"limits",
+						"sync_shared_requests"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "aliqua ut adipisicing ex incididunt"
+						}
+					]
+				},
+				"description": "This API resolves user's team id form access token and returns dynamic limit of this team from a table (created using dbt with certain rules for setting dynamic limit)."
+			},
+			"response": [
+				{
+					"id": "cbf96fda-eb8f-479e-bb65-e41e0c9ed690",
+					"name": "Success",
+					"originalRequest": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "<Basic Auth Username>",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "<Basic Auth Password>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{beta_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/x/limits/sync_shared_requests?team_id=aliqua ut adipisicing ex incididunt",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"x",
+								"limits",
+								"sync_shared_requests"
+							],
+							"query": [
+								{
+									"key": "team_id",
+									"value": "aliqua ut adipisicing ex incididunt"
+								}
+							]
+						},
+						"description": "This API resolves user's team id form access token and returns dynamic limit of this team from a table (created using dbt with certain rules for setting dynamic limit)."
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"operation\": {\n  \"type\": \"dynamic\",\n  \"name\": \"sync_shared_requests\",\n  \"hardLimit\": 100\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Health Status",
+			"id": "3355e3c3-b7f5-4619-9a22-5512f4474295",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/knockknock",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"knockknock"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "e2781c18-a619-4bfc-b371-7b7ba0b6fe2b",
+					"name": "Health Status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/knockknock",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"knockknock"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"response\": \"Who is there?\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Service Meta",
+			"id": "237b2078-e591-4386-b0bc-fff9f645fb54",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "164ebd45-bafb-4351-9756-07afa2914255",
+					"name": "Service Meta",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"version\": \"0.1.8\",\n \"uptime\": 448610,\n \"mem\": 0.17350681207548366,\n \"load\": [\n  0.03271484375,\n  0.04833984375,\n  0.08740234375\n ]\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "b8e11d2b-1d54-4265-818f-0e49f12ded3e",
+			"key": "baseUrl",
+			"value": "https://collaboration.postman.tech",
+			"type": "string"
+		}
+	]
+}

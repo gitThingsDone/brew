@@ -1,0 +1,18 @@
+id = 24e3b84e-ed5e-48e0-bcf6-079aa3a1de5c
+
+[relations]
+
+[relations.collections]
+rootDirectory = postman/collections
+files[] = {"id":"7ce937fb-56e4-48e3-92bb-eb874842fbec","path":"Collaboration Service Reference #contract.json","metaData":{}}
+files[] = {"id":"6d86acff-a28f-4c80-b449-137e47b49ab3","path":"Collection Service #schemas.json","metaData":{}}
+files[] = {"id":"e996675f-cc29-4ddd-9bb7-29ff28dd2387","path":"Publishing APIs.json","metaData":{}}
+files[] = {"id":"e669f01e-9052-4258-adc6-2feab63d50eb","path":"Search Service #reference.json","metaData":{}}
+files[] = {"id":"54b44163-87b7-4b59-b962-a4b3ac510c49","path":"Search Service basic collection for prod.json","metaData":{}}
+
+[relations.collections.metaData]
+
+[relations.apiDefinition]
+rootDirectory = postman/schemas
+
+[relations.apiDefinition.metaData]
